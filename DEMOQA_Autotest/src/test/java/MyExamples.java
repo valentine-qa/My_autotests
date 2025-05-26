@@ -1,11 +1,11 @@
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.SelenideElement;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 
 public class MyExamples {
 
@@ -57,6 +57,14 @@ public class MyExamples {
         $(byText("valentine-qa")).shouldBe(visible); //текст по всей странице
     }
 
+
+        //Перемещение элементов (А вместо В)
+        void moveAtoB() {
+            open("https://the-internet.herokuapp.com/drag_and_drop");
+            SelenideElement columnA = $("#column-a");
+            SelenideElement columnB = $("#column-b");
+            actions().clickAndHold(columnA).moveToElement(columnB).release().perform();
+        }
 }
 
 
