@@ -50,15 +50,13 @@ public class Main {
         String aStringWrapper; //str
 
 
-
-
-
         System.out.println("Hello World");
     }
 
     public static boolean methodOne() {
         return true;
     }
+
     public static boolean methodSec() {
         return false;
     }
