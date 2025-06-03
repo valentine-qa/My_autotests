@@ -21,18 +21,18 @@ public class SimpleWebTest {
     void setup(){
         open("https://yandex.by/");
     }
-//    @ValueSource(strings = {
-//            "Selenide",
-//            "Allure"
-//    })  //Аннотация описывает тип данных которые будут передаваться в тест, сколько в нем данных столько и будет тестов
-//    @ParameterizedTest(name = "В поисковой выдаче яндекса должно отображаться 10 результатов по запросу {0}") // Аннотация отражает что тест будет параметризированным
-//    @Tag("BLOCKER") // Тэгает чтобы в дальнейшем можно было запустить тест с опр тегом
-//
-//    void searchResultsShouldBeGreaterThan10(String testData){
-//        $(".simple-popup__close").click();
-//        $(".search3__input").setValue(testData).pressEnter();
-//        $$("li.serp-item").shouldHave(sizeGreaterThanOrEqual(10));
-//    }
+    @ValueSource(strings = {
+            "Selenide",
+            "Allure"
+    })  //Аннотация описывает тип данных которые будут передаваться в тест, сколько в нем данных столько и будет тестов
+    @ParameterizedTest(name = "В поисковой выдаче яндекса должно отображаться 10 результатов по запросу {0}") // Аннотация отражает что тест будет параметризированным
+    @Tag("BLOCKER") // Тэгает чтобы в дальнейшем можно было запустить тест с опр тегом
+
+    void searchResultsShouldBeGreaterThan10(String testData){
+        $(".simple-popup__close").click();
+        $(".search3__input").setValue(testData).pressEnter();
+        $$("li.serp-item").shouldHave(sizeGreaterThanOrEqual(10));
+    }
 
     @CsvSource(value = {
             "Selenide,             лаконичные и стабильные UI тесты на Java",
