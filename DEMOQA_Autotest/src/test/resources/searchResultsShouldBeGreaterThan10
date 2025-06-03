@@ -1,0 +1,12 @@
+0) TEST DATA: [
+    ["Selenide", "Allure"]
+1) TITLE: В поисковой выдаче яндекса должно отображаться 10 результатов по запросу "Selenide"
+2) PRIORITY / SEVERITY - BLOCKER
+3*) PRECONDITIONS: Открыт браузер Chrome, открыта главная страница ya.by
+
+4) STEPS
+ - В поле поиска ввести TEST_DATA
+ - Нажать кнопку "Найти"
+
+ 5) EXPECTED RESULT
+ - В поисковой выдаче яндекса должно отображаться 10 резултатов
